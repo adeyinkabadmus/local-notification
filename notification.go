@@ -27,6 +27,7 @@ func Fire(title string, message string, isAlert bool, runAfter float32) {
 	content := &Content{
 		Title:   title,
 		Message: message,
+		IsAlert: isAlert,
 	}
 	content.Display()
 }
