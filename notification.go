@@ -1,9 +1,5 @@
 package notification
 
-import (
-	"runtime"
-)
-
 //Content is a structure
 //for the notification
 type Content struct {
@@ -13,16 +9,9 @@ type Content struct {
 	RunAfter float32
 }
 
-func main() {
-	underlyingOs := runtime.GOOS
-	if underlyingOs == "windows" {
-		//select action
-	} else if underlyingOs == "darwin" {
-		//select another action
-	}
-}
-
-//Fire does fire mate
+//Fire function creates a notificatin
+//content struct and fires a notification
+//shell commands
 func Fire(title string, message string, isAlert bool, runAfter float32) {
 	content := &Content{
 		Title:   title,
